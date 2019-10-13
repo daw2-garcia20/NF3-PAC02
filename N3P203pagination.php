@@ -25,7 +25,7 @@ echo "Mostrando la pagina " . $page. "de " . $total_pages . "<br>";
 $sql_limit =  "SELECT gente_id, gente_fullname ,gente_iscaracther , gente_iscreator FROM gente LIMIT ".($page-1)*$pages." ,$pages";  
 
 $result2 = mysqli_query($db,$sql_limit) or die(mysqli_error($db));
-while($registro2 = mysqli_fetch_array($result2)) {  //Bucle para mientras registro sea igual a la array de resultado que vaya pasando por todos los registros y los muestre por pantalla
+while($registro2 = mysqli_fetch_array($result2)) {  
 	echo "<br> ID: " . $registro2["gente_id"] . "Nombre: " . $registro2["gente_fullname"] .
 	" <br> Es personaje?(1=SI): " . $registro2["gente_iscaracther"] . " Es creador?(1=SI): " . $registro2["gente_iscreator"] ;
 	echo "<br>";
