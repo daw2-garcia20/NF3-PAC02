@@ -35,6 +35,10 @@ while($registro2 = mysqli_fetch_array($result2)) {
 
 
 for($cont1=1; $cont1<=$total_pages; $cont1++){ 
-    echo "<a href='?page="  . $cont1 . "'>" . $cont1 . "</a>  ";
+    if($cont1 == $page)
+		echo "" . $cont1 .""; 
+	else
+		echo "<a href='?page="  . $cont1 . "'>" . $cont1 . "</a>  ";
+}
 }
 ?>
